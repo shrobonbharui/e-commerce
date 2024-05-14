@@ -1,7 +1,8 @@
+require('dotenv').config()
 // importe mongoose
 const mongoose = require('mongoose');
 // Data base url
-const url = 'mongodb://localhost:27017/e-commerce';
+const url = process.env.DB_CONNECTION_URL;
 
 
 mongoose.connect(url,{
